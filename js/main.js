@@ -1,6 +1,16 @@
 $(document).ready(()=>{
 
     var currentMousePosition = {x: -1, y: -1};
+        // move left eyebrow
+   
+    var brow = document.querySelectorAll('.left-ear');
+
+    var movebrow = anime({
+      targets : brow,
+      translateY: -15,
+      direction: 'alternate',
+      loop: true
+    });
 
     $(document).mousemove((event)=>{
         currentMousePosition.x = event.pageX;
